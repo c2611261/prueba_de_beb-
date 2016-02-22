@@ -1782,3 +1782,14 @@
 	}
 
 }
+
+/* customized */
+.menu--antonio .menu__item--current .menu__link {
+	color: #FFC832;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+
+.menu--antonio .menu__item::before, .menu--antonio .menu__item::after, .menu--antonio .menu__link::before, .menu--antonio .menu__link::after {
+	background: #FFC832;
+}
