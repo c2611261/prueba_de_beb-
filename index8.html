@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>宝宝测试</title>	
+
+	<link rel="stylesheet" type="text/css" href="css/radio.css" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/default2.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+	
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+
+		var answers = ["a3","a3","a3","a3","a3","a1","a3","a3","a1","a3","a3","a1","a3","a1","a1","a3","a3","a1","a3","a3","a1","a1"]
+		tot = answers.length;
+
+		function getCheckedValue( radioName ){
+   			var radios = document.getElementsByName( radioName ); // Get radio group by-name
+    		for(var y=0; y<radios.length; y++)
+      		if(radios[y].checked) return radios[y].value; // return the checked value
+		}
+
+		function getScore(){
+  			var score = 0;
+  			for (var i=0; i<tot; i++)
+    		if(getCheckedValue("q"+i)===answers[i]) score += 10; // increment only
+  			return score;
+		}
+
+/////////////////
+
+		var answers2 = ["a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2","a2"]
+		tot2 = answers2.length;
+
+		function getCheckedValue2( radioName ){
+   			var radios2 = document.getElementsByName( radioName ); // Get radio group by-name
+    		for(var y2=0; y2<radios2.length; y2++)
+      		if(radios[y2].checked) return radios[y2].value; // return the checked value
+		}
+
+		function getScore2(){
+  			var score2 = 0;
+  			for (var i2=0; i2<tot2; i2++)
+    		if(getCheckedValue("q"+i2)===answers2[i2]) score2 += 5; // increment only
+  			return score2;
+		}
+
+		function returnScore(){
+  			alert(getScore() + getScore2());
+		}
+
+	</script>
+</head>
+<body>
+	<div class="card">
+
+		  <div class="products">
+
+		    <div product-id="1" product-color="#F78D1E" class="product active">		      
+		     <div class="title">1/22. 宝宝会对您和其他家人大笑或者微笑吗？</div>
+				<input type="radio" name="q0" value="a1" id="a1_1"/>经常<br/>
+				<input type="radio" name="q0" value="a2" id="a1_2"/>有时<br/>
+				<input type="radio" name="q0" value="a3" id="a1_3"/>很少／从不<br/>
+		    </div>
+
+		    <div product-id="2" product-color="#E94734" class="product">		      
+		      <div class="title">2/22. 当有陌生人靠近时，宝宝会寻找您吗？</div>
+				<input type="radio" name="q1" value="a1" id="a2_1"/>经常<br/>
+				<input type="radio" name="q1" value="a2" id="a2_2"/>有时<br/>
+				<input type="radio" name="q1" value="a3" id="a2_3"/>很少／从不<br/>
+			</nav>
+		    </div>
+
+		    <div product-id="3" product-color="#A378ED" class="product">
+		      <div class="title">3/22. 宝宝喜欢在家人、朋友周围玩和家人、朋友在一起吗？</div>
+				<input type="radio" name="q2" value="a1" id="a3_1"/>经常<br/>
+				<input type="radio" name="q2" value="a2" id="a3_2"/>有时<br/>
+				<input type="radio" name="q2" value="a3" id="a3_3"/>很少／从不<br/>
+		    </div>
+
+		    <div product-id="4" product-color="#3EBAAB" class="product"> 
+		      <div class="title">4/22. 宝宝喜欢被抱起来和抱着吗？</div>
+				<input type="radio" name="q3" value="a1" id="a4_1"/>经常<br/>
+				<input type="radio" name="q3" value="a2" id="a4_2"/>有时<br/>
+				<input type="radio" name="q3" value="a3" id="a4_3"/>很少／从不<br/>
+		    </div>
+
+		    <div product-id="5" product-color="#F78D1E" class="product">
+		      <div class="title">5/22. 宝宝发脾气时，他/她能在半小时内平静下来吗？</div>
+				<input type="radio" name="q4" value="a1" id="a5_1"/>经常<br/>
+				<input type="radio" name="q4" value="a2" id="a5_2"/>有时<br/>
+				<input type="radio" name="q4" value="a3" id="a5_3"/>很少／从不<br/>
+		    </div>
+		  
+
+		  <div product-id="6" product-color="#E94734" class="product">
+		      <div class="title">6/22. 当您抱起宝宝时，他/她会身体僵硬和向后弯成弓形吗？</div>
+				<input type="radio" name="q5" value="a1" id="a6_1"/>经常<br/>
+				<input type="radio" name="q5" value="a2" id="a6_2"/>有时<br/>
+				<input type="radio" name="q5" value="a3" id="a6_3"/>很少／从不<br/>
+		    </div>
+
+		 <div product-id="7" product-color="#A378ED" class="product">
+		      <div class="title">7/22. 宝宝喜欢玩游戏吗？例如，“躲猫猫”等。</div>
+				<input type="radio" name="q6" value="a1" id="a7_1"/>经常<br/>
+				<input type="radio" name="q6" value="a2" id="a7_2"/>有时<br/>
+				<input type="radio" name="q6" value="a3" id="a7_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="8" product-color="#3EBAAB" class="product">
+		      <div class="title">8/22. 宝宝的身体是放松而灵活的吗？</div>
+				<input type="radio" name="q7" value="a1" id="a8_1"/>经常<br/>
+				<input type="radio" name="q7" value="a2" id="a8_2"/>有时<br/>
+				<input type="radio" name="q7" value="a3" id="a8_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="9" product-color="#F78D1E" class="product">
+		      <div class="title">9/22. 宝宝会长时间哭闹、尖叫或发脾气吗？</div>
+				<input type="radio" name="q8" value="a1" id="a9_1"/>经常<br/>
+				<input type="radio" name="q8" value="a2" id="a9_2"/>有时<br/>
+				<input type="radio" name="q8" value="a3" id="a9_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="10" product-color="#E94734" class="product">
+		      <div class="title">10/22. 宝宝能自己平静下来吗？例如，通过吸吮手或安慰奶嘴等。</div>
+				<input type="radio" name="q9" value="a1" id="a10_1"/>经常<br/>
+				<input type="radio" name="q9" value="a2" id="a10_2"/>有时<br/>
+				<input type="radio" name="q9" value="a3" id="a10_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="11" product-color="#A378ED" class="product">
+		      <div class="title">11/22. 宝宝对他/她周围的人、玩具和食物等感兴趣吗？</div>
+				<input type="radio" name="q10" value="a1" id="a11_1"/>经常<br/>
+				<input type="radio" name="q10" value="a2" id="a11_2"/>有时<br/>
+				<input type="radio" name="q10" value="a3" id="a11_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="12" product-color="#3EBAAB" class="product">
+		      <div class="title">12/22. 每次喂宝宝吃的时间超过30分钟吗？</div>
+				<input type="radio" name="q11" value="a1" id="a12_1"/>经常<br/>
+				<input type="radio" name="q11" value="a2" id="a12_2"/>有时<br/>
+				<input type="radio" name="q11" value="a3" id="a12_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="13" product-color="#F78D1E" class="product">
+		      <div class="title">13/22. 吃饭的时候，您和宝宝都愉快吗？</div>
+				<input type="radio" name="q12" value="a1" id="a13_1"/>经常<br/>
+				<input type="radio" name="q12" value="a2" id="a13_2"/>有时<br/>
+				<input type="radio" name="q12" value="a3" id="a13_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="14" product-color="#E94734" class="product">
+		      <div class="title">14/22. 宝宝有任何喂养为题吗？如恶心、呕吐等。</div>
+				<input type="radio" name="q13" value="a1" id="a14_1"/>经常<br/>
+				<input type="radio" name="q13" value="a2" id="a14_2"/>有时<br/>
+				<input type="radio" name="q13" value="a3" id="a14_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="15" product-color="#A378ED" class="product">
+		      <div class="title">15/22. 宝宝白天小睡或晚上睡觉时，入睡有困难吗？</div>
+				<input type="radio" name="q14" value="a1" id="a15_1"/>经常<br/>
+				<input type="radio" name="q14" value="a2" id="a15_2"/>有时<br/>
+				<input type="radio" name="q14" value="a3" id="a15_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="16" product-color="#3EBAAB" class="product">
+		      <div class="title">16/22. 宝宝牙牙学语吗？例如，连续发出类似“爸-爸-爸-爸”或者“哪-哪-哪-哪”的声音</div>
+				<input type="radio" name="q15" value="a1" id="a16_1"/>经常<br/>
+				<input type="radio" name="q15" value="a2" id="a16_2"/>有时<br/>
+				<input type="radio" name="q15" value="a3" id="a16_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="17" product-color="#F78D1E" class="product">
+		      <div class="title">17/22. 在一天24小时里，宝宝的睡眠时间至少有10小时吗？</div>
+				<input type="radio" name="q16" value="a1" id="a17_1"/>经常<br/>
+				<input type="radio" name="q16" value="a2" id="a17_2"/>有时<br/>
+				<input type="radio" name="q16" value="a3" id="a17_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="18" product-color="#E94734" class="product">
+		      <div class="title">18/22. 宝宝经常有便秘或腹泻吗？</div>
+				<input type="radio" name="q17" value="a1" id="a18_1"/>经常<br/>
+				<input type="radio" name="q17" value="a2" id="a18_2"/>有时<br/>
+				<input type="radio" name="q17" value="a3" id="a18_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="19" product-color="#A378ED" class="product">
+		      <div class="title">19/22. 当宝宝饿了、痛了或累了时，他/她能使您知道吗？</div>
+				<input type="radio" name="q18" value="a1" id="a19_1"/>经常<br/>
+				<input type="radio" name="q18" value="a2" id="a19_2"/>有时<br/>
+				<input type="radio" name="q18" value="a3" id="a19_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="20" product-color="#3EBAAB" class="product">
+		      <div class="title">20/22. 当宝宝饿了、痛了或累了时，他/她能使您知道吗？</div>
+				<input type="radio" name="q19" value="a1" id="a20_1"/>经常<br/>
+				<input type="radio" name="q19" value="a2" id="a20_2"/>有时<br/>
+				<input type="radio" name="q19" value="a3" id="a20_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="21" product-color="#F78D1E" class="product">
+		      <div class="title">21/22. 当宝宝饿了、痛了或累了时，他/她能使您知道吗？</div>
+				<input type="radio" name="q20" value="a1" id="a21_1"/>经常<br/>
+				<input type="radio" name="q20" value="a2" id="a21_2"/>有时<br/>
+				<input type="radio" name="q20" value="a3" id="a21_3"/>很少／从不<br/>
+		    </div>
+
+		<div product-id="22" product-color="#E94734" class="product">
+		      <div class="title">22/22. 当宝宝饿了、痛了或累了时，他/她能使您知道吗？</div>
+				<input type="radio" name="q21" value="a1" id="a22_1"/>经常<br/>
+				<input type="radio" name="q21" value="a2" id="a22_2"/>有时<br/>
+				<input type="radio" name="q21" value="a3" id="a22_3"/>很少／从不<br/>
+				<hr>
+				<button onclick="returnScore()">View Results</button>
+		    </div>
+
+				
+		 </div>
+
+		  <div class="footer"><a id="prev" href="#" ripple="" ripple-color="#666666" class="btn">Prev</a><a id="next" href="#" ripple="" ripple-color="#666666" class="btn">Next</a></div>
+		</div>
+
+
+	</div><!-- /card -->
+	<script src="js/classie.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src='js/stopExecutionOnTimeout.js?t=1' type="text/javascript"></script>
+	<script src="http://libs.useso.com/js/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script type="text/javascript">
+	$(document).ready(function () {
+	    var getProductHeight = $('.product.active').height();
+	    $('.products').css({ height: getProductHeight });
+	    function calcProductHeight() {
+	        getProductHeight = $('.product.active').height();
+	        $('.products').css({ height: getProductHeight });
+	    }
+	    function animateContentColor() {
+	        var getProductColor = $('.product.active').attr('product-color');
+	        $('body').css({ background: getProductColor });
+	        $('.title').css({ color: getProductColor });
+	        $('.btn').css({ color: getProductColor });
+	    }
+	    var productItem = $('.product'), productCurrentItem = productItem.filter('.active');
+	    $('#next').on('click', function (e) {
+	        e.preventDefault();
+	        var nextItem = productCurrentItem.next();
+	        productCurrentItem.removeClass('active');
+	        if (nextItem.length) {
+	            productCurrentItem = nextItem.addClass('active');
+	        } else {
+	            productCurrentItem = productItem.first().addClass('active');
+	        }
+	        calcProductHeight();
+	        animateContentColor();
+	    });
+	    $('#prev').on('click', function (e) {
+	        e.preventDefault();
+	        var prevItem = productCurrentItem.prev();
+	        productCurrentItem.removeClass('active');
+	        if (prevItem.length) {
+	            productCurrentItem = prevItem.addClass('active');
+	        } else {
+	            productCurrentItem = productItem.last().addClass('active');
+	        }
+	        calcProductHeight();
+	        animateContentColor();
+	    });
+	    $('[ripple]').on('click', function (e) {
+	        var rippleDiv = $('<div class="ripple" />'), rippleSize = 60, rippleOffset = $(this).offset(), rippleY = e.pageY - rippleOffset.top, rippleX = e.pageX - rippleOffset.left, ripple = $('.ripple');
+	        rippleDiv.css({
+	            top: rippleY - rippleSize / 2,
+	            left: rippleX - rippleSize / 2,
+	            background: $(this).attr('ripple-color')
+	        }).appendTo($(this));
+	        window.setTimeout(function () {
+	            rippleDiv.remove();
+	        }, 1900);
+	    });
+	});
+	</script>
+	<script>
+		(function() {
+			[].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+				var menuItems = menu.querySelectorAll('.menu__link'),
+					setCurrent = function(ev) {
+						ev.preventDefault();
+
+						var item = ev.target.parentNode; // li
+
+						// return if already current
+						if( classie.has(item, 'menu__item--current') ) {
+							return false;
+						}
+						// remove current
+						classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+						// set current
+						classie.add(item, 'menu__item--current');
+					};
+
+				[].slice.call(menuItems).forEach(function(el) {
+					el.addEventListener('click', setCurrent);
+				});
+			});
+
+			[].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+				link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+				new Clipboard(link);
+				link.addEventListener('click', function() {
+					classie.add(link, 'link-copy--animate');
+					setTimeout(function() {
+						classie.remove(link, 'link-copy--animate');
+					}, 300);
+				});
+			});
+		})(window);
+	</script>
+</body>
+</html>
