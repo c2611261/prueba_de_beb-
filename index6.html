@@ -274,7 +274,24 @@
 	    var productItem = $('.product'), productCurrentItem = productItem.filter('.active');
 	    $('#next').on('click', function (e) {
 	        e.preventDefault();
+	        var inputs = productCurrentItem.children(".checkbox").children("input");
+	        var checked = false
 	        var nextItem = productCurrentItem.next();
+	        for (var i=0; i<inputs.length; i++){
+	        	if(inputs[i].checked === true){
+	        		checked = true;
+	        		break;
+	        	}
+	        }
+	        console.log(nextItem);
+	        if(checked === false ){
+	        	alert('not selected ');
+	        	return;
+	        }
+	        if(nextItem.length === 0){
+	        	alert('the end of exam');
+	        	return;
+	        }
 	        productCurrentItem.removeClass('active');
 	        if (nextItem.length) {
 	            productCurrentItem = nextItem.addClass('active');
