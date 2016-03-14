@@ -300,7 +300,24 @@
 	    var productItem = $('.product'), productCurrentItem = productItem.filter('.active');
 	    $('#next').on('click', function (e) {
 	        e.preventDefault();
+	        var inputs = productCurrentItem.children(".checkbox").children("input");
+	        var checked = false
 	        var nextItem = productCurrentItem.next();
+	        for (var i=0; i<inputs.length; i++){
+	        	if(inputs[i].checked === true){
+	        		checked = true;
+	        		break;
+	        	}
+	        }
+	        console.log(nextItem);
+	        if(checked === false ){
+	        	alert('请选择您的答案');
+	        	return;
+	        }
+	        if(nextItem.length === 0){
+	        	alert('这是最后一题了，请点击“查看您的得分”获取分数');
+	        	return;
+	        }
 	        productCurrentItem.removeClass('active');
 	        if (nextItem.length) {
 	            productCurrentItem = nextItem.addClass('active');
@@ -313,6 +330,12 @@
 	    $('#prev').on('click', function (e) {
 	        e.preventDefault();
 	        var prevItem = productCurrentItem.prev();
+
+	        if(prevItem.length === 0){
+	        	alert('这已经是第一题了哦');
+	        	return;
+	        }
+
 	        productCurrentItem.removeClass('active');
 	        if (prevItem.length) {
 	            productCurrentItem = prevItem.addClass('active');
